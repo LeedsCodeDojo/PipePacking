@@ -177,3 +177,6 @@ FakesAssemblies/
 # Racket compiled files
 *_rkt.dep
 *_rkt.zo
+
+# Erlang compiled files
+*.beam
