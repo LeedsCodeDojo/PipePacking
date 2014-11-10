@@ -5,21 +5,26 @@ module Sort where
 This declares the module.
 
 **Links**
-* Loading Modules:  http://learnyouahaskell.com/modules#loading-modules
+* [Loading Modules](http://learnyouahaskell.com/modules#loading-modules)
 
 ```
 nextBin	:: (Num a, Ord a) => a -> [a] -> [a] -> ([a], [a])
 ```
 
 This defines the method signature of nextBin. You can break it down as follows:
-	nextBin	:: 
-		This means the definition relates to nextBin
-	(Num a, Ord a)
-		This is used to restrict the types to Num and Ord. Num is a number supertype and Ord means it can be compared using < and >.
-    a -> [a] -> [a] -> ([a], [a])
-    	This is the method signature. It says that the function takes a, [a], [a] and returns ([a], [a]).
-    	This is useful because haskell leans heavily on currying functions.
-    	See the link for a explaination of currying.	    	
+
+nextBin	::
+
+This means the definition relates to nextBin
+		
+(Num a, Ord a)
+
+This is used to restrict the types to Num and Ord. Num is a number supertype and Ord means it can be compared using < and >.
+
+a -> [a] -> [a] -> ([a], [a])
+
+This is the method signature. It says that the function takes a, [a], [a] and returns ([a], [a]).
+This is useful because haskell leans heavily on currying functions.
 
 **Links**
 * Curried Functions: http://learnyouahaskell.com/higher-order-functions#curried-functions
