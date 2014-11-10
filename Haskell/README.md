@@ -55,7 +55,7 @@ _remenants@(item:items)_ Means when a list is provided put the whole list in rem
 
 **Links**
 * [Pattern Matching](http://learnyouahaskell.com/syntax-in-functions#pattern-matching)
-* [remenants@(item:items)](http://learnyouahaskell.com/syntax-in-functions)
+* [Syntax in functions](http://learnyouahaskell.com/syntax-in-functions)
 
 ---
 
