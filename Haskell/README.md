@@ -37,7 +37,7 @@ _ is used to say this is a parameter we don't care about.
 
 _[]_ is used to say when an empty list is passed into the second parameter
 
-_(box, [])_ This also returns a tuple. A tuple is similar to a c# struct in that it is a way of dealing with multiple pieces of data in a known format in a single structure.
+_(box, [])_ This returns a tuple. A tuple is similar to a c# struct in that it is a way of dealing with multiple pieces of data in a known format in a single structure.
 
 **Links**
 * Pattern Matching: http://learnyouahaskell.com/syntax-in-functions#pattern-matching
