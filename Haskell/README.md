@@ -7,6 +7,8 @@ This declares the module.
 **Links**
 * [Loading Modules](http://learnyouahaskell.com/modules#loading-modules)
 
+---
+
 ```
 nextBin	:: (Num a, Ord a) => a -> [a] -> [a] -> ([a], [a])
 ```
@@ -22,6 +24,8 @@ _a -> [a] -> [a] -> ([a], [a])_ This is the method signature. It says that the f
 **Links**
 * Curried Functions: http://learnyouahaskell.com/higher-order-functions#curried-functions
 * Tuples: http://learnyouahaskell.com/starting-out#tuples
+
+---
 
 ```
 nextBin _ [] box = (box, [])
@@ -39,6 +43,8 @@ _(box, [])_ This also returns a tuple. A tuple is similar to a c# struct in that
 * Pattern Matching: http://learnyouahaskell.com/syntax-in-functions#pattern-matching
 * Tuples: http://learnyouahaskell.com/starting-out#tuples
 
+---
+
 ```
 nextBin size remenants@(item:items) box = 
 ```
@@ -51,6 +57,8 @@ _remenants@(item:items)_ Means when a list is provided put the whole list in rem
 * Pattern Matching: http://learnyouahaskell.com/syntax-in-functions#pattern-matching
 * remenants@(item:items): http://learnyouahaskell.com/syntax-in-functions
 
+---
+
 ```
 if (foldl (+) item box) <= size
 ```
@@ -61,6 +69,8 @@ This line uses foldl to sum the elements in the box and then new item to see if 
 **Links**
 * Folds (http://learnyouahaskell.com/higher-order-functions#folds)
 * Curried Functions: http://learnyouahaskell.com/higher-order-functions#curried-functions
+
+---
 
 ```
 then nextBin size items (item:box)
@@ -73,6 +83,8 @@ _(item:box)_ means add the element (item) to the beginning of the list (box).
 **Links**
 * Recursion (http://learnyouahaskell.com/recursion#hello-recursion) 
 
+---
+
 ```
 else (box, remenants)
 ```
@@ -81,6 +93,8 @@ Because we can't fit the next item in we are returning what is in the box and th
 
 **Links**
 * Tuples (http://learnyouahaskell.com/starting-out#tuples)
+
+---
 
 ```
 getBin :: (Num a, Ord a) => a -> [a] -> [[a]]
@@ -98,6 +112,8 @@ _a -> [a] -> [[a]]_ This is the method signature. It says that the function take
 * Curried Functions: http://learnyouahaskell.com/higher-order-functions#curried-functions
 * Tuples: http://learnyouahaskell.com/starting-out#tuples
 
+---
+
 ```
 getBin _ [] = []
 ```
@@ -114,6 +130,8 @@ This is so when we are recursively concatonating we have a list at the end of th
 Links
 	Pattern Matching: http://learnyouahaskell.com/syntax-in-functions#pattern-matching
 
+---
+
 ```
 getBin bin_size allItems = 
 ```
@@ -123,6 +141,8 @@ Haskell uses parameter pattern matching to determine which function it should ru
 **Links**
 * Pattern Matching: http://learnyouahaskell.com/syntax-in-functions#pattern-matching
 
+---
+
 ```
 let next = nextBin bin_size	allItems []
 ```
@@ -131,6 +151,8 @@ Here you can see an example of let. This means that first haskell will evaluate 
 
 **Links**
 * Let: http://learnyouahaskell.com/syntax-in-functions#let-it-be
+
+---
 
 ```
 in (fst next) : getBin bin_size (snd next)
